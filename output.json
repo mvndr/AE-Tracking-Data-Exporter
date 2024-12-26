@@ -1,0 +1,12 @@
+  }
+
+    var saveFile = File.saveDialog("Save Tracking Data as JSON", "*.json");
+    if (saveFile) {
+        saveFile.open("w");
+        saveFile.write(JSON.stringify(jsonData, null, 4));
+        saveFile.close();
+        alert("Tracking data exported successfully.");
+    }
+}
+
+exportTrackingData();
